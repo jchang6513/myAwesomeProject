@@ -22,12 +22,11 @@ export default class App extends Component<Props> {
   render() {
     return (
       <MapView
-        style={{ flex: 1 }}
-        provider={PROVIDER_GOOGLE}
+        style={styles.map}
         showsUserLocation
         initialRegion={{
-          latitude: 37.78825,
-          longitude: -122.4324,
+          latitude: 25.0200,
+          longitude: 121.3200,
           latitudeDelta: 0.0922,
           longitudeDelta: 0.0421}
         }
@@ -52,5 +51,12 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     color: '#333333',
     marginBottom: 5,
+  },
+  map: {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
   },
 });
